@@ -1,0 +1,148 @@
+/* Основной стиль страницы */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f9f9f9, #e9f1f7);
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    animation: fadeIn 0.7s ease-in;
+  }
+  
+  /* Заголовки */
+  h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+    animation: slideInDown 0.6s ease-out;
+  }
+  
+  /* Общие карточки */
+  .question, .form-section {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 7px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .question:hover, .form-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Картинки */
+  .question img {
+    max-width: 100%;
+    margin-top: 1rem;
+    border-radius: 10px;
+  }
+  
+  /* Кнопки */
+  button {
+    background: #0077cc;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    font-weight: 500;
+  }
+  
+  button:hover {
+    background: #005fa3;
+    transform: scale(1.03);
+  }
+  
+  /* Поля ввода */
+  input, textarea, select {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+    font-size: 1rem;
+  }
+  
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #0077cc;
+  }
+  
+  /* Результат ответа */
+  .result {
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .correct {
+    color: #28a745;
+  }
+  
+  .wrong {
+    color: #dc3545;
+  }
+  
+  /* Навигация */
+  .navbar {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease;
+  }
+  
+  .navbar a {
+    margin: 0 1rem;
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #0077cc;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+  
+  .navbar a:hover {
+    color: #005fa3;
+  }
+  
+  .navbar a:hover::after {
+    width: 100%;
+  }
+  
+  /* Анимации */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 600px) {
+    body {
+      padding: 1rem;
+    }
+  
+    .navbar a {
+      display: block;
+      margin: 0.5rem 0;
+    }
+  }
+  

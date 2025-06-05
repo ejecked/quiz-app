@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Добавить вопрос</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Пройти тест</a>
+    <a href="add.html">Добавить вопрос</a>
+    <a href="edit.html">Редактировать вопросы</a>
+  </div>
+
+  <div class="form-section">
+    <h2>Добавить вопрос</h2>
+    <form id="questionForm">
+      <textarea id="questionText" placeholder="Текст вопроса" required></textarea>
+      <input type="text" placeholder="Ответ 1" id="ans1" required />
+      <input type="text" placeholder="Ответ 2" id="ans2" required />
+      <input type="text" placeholder="Ответ 3" id="ans3" required />
+      <select id="correctAnswer">
+        <option value="0">Ответ 1</option>
+        <option value="1">Ответ 2</option>
+        <option value="2">Ответ 3</option>
+      </select>
+      <input type="file" id="image" />
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+
+  <script src="js/add.js"></script>
+</body>
+</html>
